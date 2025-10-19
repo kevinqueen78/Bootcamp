@@ -1,0 +1,44 @@
+.first-article  {
+    border: 5px solid greenyellow;
+    background-color: green;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+}
+
+.first-h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+.first-h2{
+    color: yellow;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+.second-h2{
+    color: red;
+    text-transform: uppercase;
+
+}
+
+.third-article{
+    background-color: lightblue;
+    border: 5px dashed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.fancy-button{
+    border: 3px solid black;
+    font-size: 20px;
+    background-color:  orange;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+}
+.fancy-button:hover{
+    background-color: green;
+}
+body {font-family: 'Courier New', Courier, monospace;
+}

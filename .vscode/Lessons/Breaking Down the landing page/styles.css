@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+
+}
+
+.main-container {
+    flex: 1;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.navbar ul li {
+    margin-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: lightblue;
+    text-align: center;
+    padding: 60px;
+}
+.hero h1 {
+    margin-bottom:  20px;
+    font-size: 2.5em;
+}
+.hero p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+.hero-image {
+    border-radius: 10px;
+
+}
+
+.portfolio {
+    text-align: center;
+    padding: 40px;
+    
+
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
+
+.portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.portfolio h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+
+}
+
+.card {
+    border: 1px solid #ddd;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 20px;
+
+
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer ul {
+    list-style: none;
+    padding-bottom: 10px;
+
+
+
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 15px;
+
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+
+}
+

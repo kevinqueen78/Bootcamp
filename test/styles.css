@@ -1,0 +1,104 @@
+/* General Reset to remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: red; /* Dark background */
+  padding: 10px 20px; /* Spacing inside navbar */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo Styles */
+.logo {
+  color: white; /* White text color */
+  font-size: 24px; /* Larger font size */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hamburger Icon Styles */
+/* The fix: Our custom styles now override any conflicting styles from Font Awesome */
+.menu-toggle {
+  color: white; /* White icon color */
+  font-size: 24px; /* Icon size */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: none; /* Hide by default (visible only on mobile) */
+}
+
+/* Navigation Menu Styles */
+.menu {
+  display: flex; /* Display menu items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Menu List Styles */
+.menu ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display list items inline */
+}
+
+/* Menu Item Styles */
+.menu li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+/* Menu Link Styles */
+.menu a {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Font size */
+}
+
+/* Hover Effect on Menu Links */
+.menu a:hover {
+  color: #ddd; /* Light gray on hover */
+}
+
+/* Content Styles */
+.content {
+  padding: 20px;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  /* Show the hamburger icon */
+  .menu-toggle {
+    display: block; /* Show icon only in mobile view */
+  }
+
+  /* Hide the menu by default in mobile view */
+  .menu {
+    display: none; /* Hide menu */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position relative to navbar */
+    background-color: #333; /* Same background as navbar */
+    top: 60px; /* Position below the navbar */
+    left: 0;
+    right: 0;
+    z-index: 1; /* Stay on top of other elements */
+    padding: 20px 0; /* Padding around menu items */
+  }
+
+  /* Show the menu when active */
+  .menu.active {
+    display: flex; /* Display menu */
+  }
+
+  /* Adjust the menu list for mobile */
+  .menu ul {
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Adjust menu items for mobile */
+  .menu li {
+    margin: 10px 0; /* Space between items */
+  }
+}

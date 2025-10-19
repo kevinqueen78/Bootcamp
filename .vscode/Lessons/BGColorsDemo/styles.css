@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container::after {
+    content: "default View";
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    padding: 50px 0;
+    color: black;
+}
+
+
+/*Mobile View*/
+
+@media only screen and (min-width: 1px) and (max-width: 599px ) {
+
+    body {
+        background-color: blue;
+    }
+
+    .container::after {
+        content: "Mobile View";
+        color: white;
+    }
+}
+
+/*Tablet View*/
+
+
+@media only screen and (min-width:600px) and (max-width: 899px) {
+    body{
+        background-color: green ;
+}
+    .container::after {
+        content: "Tablet View";
+        color: white;
+        }
+}
+
+/*Desktop View*/
+
+
+@media only screen and (min-width:900px) and (max-width: 2499px) {
+    body{
+        background-color: red;
+}
+        .container::after {
+            content: "Desktop View";
+            color: white;
+        }
+}
+/*Extra Large Desktop View*/
+
+@media only screen and (min-width:2500px){
+    body{
+        background-color: red;
+}
+        .container::after {
+            content: "Extra Large Desktop View";
+            color: white;
+        }
+}
+
+
+
+
+
+
+/*Mobile View*/
+
+@media only screen and (min-width: 1px) and (max-width: 599px ) {
+
+    body {
+        background-color: blue;
+    }
+
+    .container::after {
+        content: "Mobile View";
+        color: white;
+    }
+}
+
+/*Tablet View*/
+
+
+@media only screen and (min-width:600px) and (max-width: 899px) {
+    body{
+        background-color: green ;
+}
+    .container::after {
+        content: "Tablet View";
+        color: white;
+        }
+}
+
+/*Desktop View*/
+
+
+@media only screen and (min-width:900px) and (max-width: 2499px) {
+    body{
+        background-color: red;
+}
+        .container::after {
+            content: "Desktop View";
+            color: white;
+        }
+}
+/*Extra Large Desktop View*/
+
+@media only screen and (min-width:2500px){
+    body{
+        background-color: red;
+}
+        .container::after {
+            content: "Extra Large Desktop View";
+            color: white;
+        }
+}
+
