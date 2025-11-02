@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    background-color: black;
+    max-height: fit-content;
+    position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;;
+       
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.menu .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    
+   
+    
+}
+
+.menu .navigation li a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    font-size: 1.5em;
+    
+}
+
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url("https://www.re-thinkingthefuture.com/wp-content/uploads/2019/07/A295-30-Works-of-Zaha-Hadid-Front-view-of-the-centre-London-Aquatics-Centre-for-the-2012-Summer-Olympics.jpg");
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.banner2 {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url("https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/HISTORY-.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.title {
+    color: lightskyblue;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+.banner .content {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    max-width: 75%;
+    
+}
+
+.banner .content .title f4{
+    padding: 10px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.banner .content p {
+    color: lightseagreen;
+    padding: 10px;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.btn {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+
+   
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: lightskyblue;
+}
+
+.row2 {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    background-color: lightskyblue;
+}
+
+.img {
+    max-width: 48%;
+    border: 10px solid lightskyblue;
+}
+
+.article {
+    max-width: 52%;
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 5px solid lightskyblue;
+
+   
+}
+
+.article h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: lightskyblue;
+}
+
+
+
+    
+
+    table {
+        width: 100%;
+        margin-top: 200px;
+        margin-bottom: 50px;
+        border-collapse: collapse;
+        background-color: lightskyblue;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: left;
+    }
+
+    thead {
+        background: lightgrey;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        
+        
+    }
+    
+    tbody tr:nth-child(even) {
+        background: blue;
+    }
+
+    tbody tr:hover {
+        background: lightseagreen;
+    }
+
+
+
+.dates {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url(https://i0.pickpik.com/photos/18/598/367/live-music-rock-show-concert-preview.jpg);
+}
+
+.contactus {
+    background: url(https://img.izismile.com/img/img4/20111022/640/spectacular_rave_light_show_parties_640_04.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 80px;
+    min-height: 10vh;
+    border: 20px solid lightseagreen;
+
+
+}
+
+.contactform {
+    padding: 60px 50px;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.contactform h3 {
+    color: whitesmoke;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+}
+
+.contactform .inputbox {
+width: 100%;
+margin-bottom: 20px;
+}
+
+.contactform .inputbox input, .contactform .inputbox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputbox .btn {
+    color: white;
+    width: 30%;
+    padding: 10px 20px;
+}
+
+.contactform .inputbox .btn:hover {
+    background-color: #79092f;
+}
+
