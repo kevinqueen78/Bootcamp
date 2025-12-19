@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact the Event Center</title>
 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+</link>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
@@ -14,20 +21,20 @@
 
 </head>
 <body>
-    <header class="header">
-            <img class="gbimg" src="https://www.youreventcenter.com/content/wp-content/themes/your-event-center/images/EventCenter_Logo.gif" alt="The Event Center Logo">
-        
-    
-            <nav class="menu">
-                
-                <ul class="navigation"> 
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html">Home</a></li>      
-                </ul>
-
+        <header class="header">
             
-
+        <a href="#" class="logo">The Event Center</a>        
+        
+        <i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>  
+        
+        <nav class="menu" id="mainMenu">
+                
+            <ul class="navigation"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>      
+            </ul>
+            
             </nav> 
     </header>
 
@@ -69,5 +76,12 @@
 
         </div>
     </footer>
+
+       <script>
+   function toggleMenu() {
+        const menu = document.getElementById("mainMenu");
+        menu.classList.toggle("active");
+    }
+    </script>
 </body>
 </html>

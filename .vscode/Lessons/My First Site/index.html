@@ -1,9 +1,384 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Site</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Center Home - Your Local Live Music Venue</title>
+    <meta name="description" content="The Event Center - Your local headquarters for live music events and concerts">
+    
+    <!-- Font Awesome - Updated to stable version -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .logo:hover {
+            color: var(--secondary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            color: var(--secondary-color);
+        }
+
+        .navigation {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        .navigation a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Banner Section */
+        .banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: var(--spacing-lg) var(--spacing-md);
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .banner h4 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            color: #ecf0f1;
+            font-weight: 400;
+        }
+
+        .banner p {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            color: #bdc3c7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .article h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .article h5 {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .article p {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: var(--spacing-lg);
+        }
+
+        .footer h5 {
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .icon a {
+            color: white;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .icon a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Tablet (768px - 1024px) */
+        @media (max-width: 1024px) {
+            .header {
+                padding: 1rem 1.5rem;
+            }
+            
+            .main {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+
+            .row {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Mobile (up to 768px) */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .menu.active {
+                max-height: 300px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+            }
+
+            .navigation li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .navigation a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+
+            .banner {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .img {
+                max-height: 300px;
+            }
+
+            .main {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+        }
+
+        /* Large Display (1440px+) */
+        @media (min-width: 1440px) {
+            .main {
+                max-width: 1400px;
+            }
+            
+            .row {
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <header class="header">
+        <a href="#" class="logo">The Event Center</a>        
+        
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>  
+        
+        <nav class="menu">
+            <ul class="navigation"> 
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>      
+            </ul>
+        </nav> 
+    </header>
+
+    <section class="banner">
+        <div class="content">
+            <h1 class="title">Welcome to the Event Center</h1>
+            <h4>Your local headquarters for live music</h4>
+            <p>Experience unforgettable nights of live music in an intimate setting. From local talent to touring acts, we bring the best performances to your community. Join us for an evening of exceptional sound, great company, and memories that last a lifetime.</p>
+            <a href="#events" class="btn">Upcoming Events</a>
+        </div>
+    </section>
+
+    <main class="main">
+        <article class="row">
+            <img class="img" src="https://www.discovertheburgh.com/wp-content/uploads/2022/11/Petersen-Events-Center-Concerts-2000px-6.jpg" alt="Concert audience enjoying live performance at The Event Center" loading="lazy">
+            <div class="article">
+                <h2>Experience Live Music Like Never Before</h2>
+                <h5>State-of-the-art sound and intimate atmosphere</h5>
+                <p>The Event Center has been the premier destination for live music enthusiasts since our opening. Our venue combines cutting-edge audio technology with an intimate setting that brings you closer to the artists you love. Whether you're a fan of rock, jazz, indie, or electronic music, we host a diverse range of performances throughout the year. Our acoustically optimized space ensures every note reaches you with crystal clarity, while our flexible seating arrangements create the perfect atmosphere for any show. Come early to enjoy craft beverages at our bar, meet fellow music lovers, and immerse yourself in an experience that goes beyond just a concert. At The Event Center, we're not just hosting shows – we're building a community of passionate music fans.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <h5>Copyright 2025 The Event Center - All Rights Reserved</h5>
+        <div class="icon">
+            <a href="#" aria-label="Visit our Facebook page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Visit our Twitter page"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu");
+            const menuToggle = document.querySelector(".menu-toggle");
+            menu.classList.toggle("active");
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = menu.classList.contains("active");
+            menuToggle.setAttribute("aria-expanded", isExpanded);
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.querySelector(".menu");
+            const menuToggle = document.querySelector(".menu-toggle");
+            const header = document.querySelector(".header");
+            
+            if (!header.contains(event.target) && menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        // Close menu on window resize to desktop size
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const menu = document.querySelector(".menu");
+                const menuToggle = document.querySelector(".menu-toggle");
+                menu.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+
+</body>
 </html>

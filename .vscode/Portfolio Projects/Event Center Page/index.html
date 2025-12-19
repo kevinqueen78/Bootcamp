@@ -9,24 +9,31 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="styles.css">
+    
+ 
 </head>
 <body>
   
     <header class="header">
-            <img class="gbimg" src="https://www.youreventcenter.com/content/wp-content/themes/your-event-center/images/EventCenter_Logo.gif" alt="The Event Center Logo">
-        
-    
-            <nav class="menu">
-                
-                <ul class="navigation"> 
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>      
-                </ul>
-
             
-
+        <a href="#" class="logo">The Event Center</a>        
+        
+        <i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>  
+        
+        <nav class="menu" id="mainMenu">
+                
+            <ul class="navigation"> 
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>      
+            </ul>
+            
             </nav> 
     </header>
     <div class="banner">
@@ -60,7 +67,19 @@
       
 
         </div>
+
+        
+    
     </footer>
+
+    <script>
+   function toggleMenu() {
+        const menu = document.getElementById("mainMenu");
+        menu.classList.toggle("active");
+    }
+    </script>
+
+
 
 </body>
 </html>
