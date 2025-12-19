@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠JavScript Fundamentals Quiz Challenge</h1>
+        
+        <div id="quiz" class="quiz-container">
+            <div class="quiz-info">
+                <span>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span></span>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+
+            <div class="question-container">
+                <div class="question" id="question"></div>
+                <div class="answers" id="answers"></div>
+            </div>
+
+            <button class="next-btn hidden" id="nextBtn">Next Question</button>
+        </div>
+
+        <div id="results" class="results">
+            <h2>Quiz Complete! 🎉</h2>
+            <div class="score-display" id="finalScore"></div>
+            <div class="results-message" id="resultsMessage"></div>
+            <button class="restart-btn" id="restartBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <form id="task-form" aria-labelledby="form-title">
+            <h2 id="form-title" class="sr-only">Add New Task</h2>
+            <label for="task-input">New Task:</label>
+            <input type="text" id="task-input" placeholder="Enter a task" required aria-describedby="input-help">
+            <span id="input-help" class="sr-only">Type the task description and press Add Task</span>
+            <button type="submit">Add Task</button>
+        </form>
+        <section>
+            <h2>Tasks</h2>
+            <ul id="task-list" aria-label="List of tasks"></ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\fires\.vscode\Files\TaskManager\index.html
