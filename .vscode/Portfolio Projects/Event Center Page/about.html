@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About the Event Center</title>
 
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+</link>
     />
 
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-    <header class="header">
-            <img class="gbimg" src="https://www.youreventcenter.com/content/wp-content/themes/your-event-center/images/EventCenter_Logo.gif" alt="The Event Center Logo">
-        
-    
-            <nav class="menu">
-                
-                <ul class="navigation"> 
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>      
-                </ul>
-
+        <header class="header">
             
-
+        <a href="#" class="logo">The Event Center</a>        
+        
+        <i class="fa-solid fa-bars menu-toggle" onclick="toggleMenu()"></i>  
+        
+        <nav class="menu" id="mainMenu">
+                
+            <ul class="navigation"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">Contact</a></li>      
+            </ul>
+            
             </nav> 
     </header>
 
@@ -47,9 +55,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nesciunt minima molestias autem officiis ratione explicabo! Perferendis ipsum praesentium itaque vitae nisi explicabo, reprehenderit ducimus magni cumque voluptate commodi quae laborum tenetur aperiam deleniti! Minus consequatur dolor voluptates iure! Sint magnam libero esse labore amet mollitia accusantium cumque. Aperiam ipsa, reprehenderit fugit quaerat sunt nesciunt suscipit rem amet optio quae deleniti repudiandae nulla neque nam! At iusto porro dolor assumenda iure minima cupiditate architecto, accusantium atque fugit asperiores voluptatem et tenetur nulla eius consectetur labore? Nam tenetur dolorum dolor, impedit nisi veniam minus vero quam repudiandae iure facere illo, in voluptatibus dolores! Amet iusto officiis reiciendis accusantium voluptatum dolore asperiores! Repellat voluptate, ipsa fugit laborum mollitia dignissimos quibusdam, accusamus ex corporis, nisi assumenda eum quasi eos a aut explicabo? Qui, sed ab. Et error magnam quisquam ratione tempore pariatur, reprehenderit, perferendis aperiam nesciunt rerum non quae? Eaque hic ut corrupti explicabo neque deserunt odio veniam, quasi, sit in eum fuga sapiente aut voluptas doloremque reprehenderit est fugit soluta harum laborum illum, modi quod. Perferendis maiores omnis labore recusandae, consequuntur pariatur officiis asperiores est sit magnam praesentium ut eum, quasi tenetur? Doloribus hic voluptas ratione, perspiciatis ducimus earum molestias eaque impedit repudiandae vero, quo deserunt ad tempora quisquam obcaecati eius repellendus? Soluta, atque. Perferendis, magni molestias exercitationem illo autem illum excepturi, cupiditate tenetur fugit expedita natus facere rem placeat, est ex reiciendis dignissimos vero nisi adipisci sequi accusantium? Quibusdam suscipit, impedit nesciunt est iste dolores dolorem, quod commodi laborum minus tempore!</p>
         
         </div>
-    </div>
-
-    <div class="main">
+    
         <div class="row2">
             <img class="img" src="https://www.invaluable.com/blog/wp-content/uploads/sites/77/2019/05/2-brief-history-2.jpg" alt="Second Building mid-twentieth Century">
             <div class="article">
@@ -59,6 +65,13 @@
         
         </div>
     </div>
+
+           <script>
+   function toggleMenu() {
+        const menu = document.getElementById("mainMenu");
+        menu.classList.toggle("active");
+    }
+    </script>
 
     <footer class="footer">
         <h5>Copyright 2025 All Rights Reserved</h5>
@@ -70,5 +83,7 @@
 
         </div>
     </footer>
+
+
 </body>
 </html>
