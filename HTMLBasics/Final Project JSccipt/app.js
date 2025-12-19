@@ -91,12 +91,13 @@ async function getJoke() {
 async function getPublicApiInfo() {
     const output = document.getElementById("publicapi-output");
     try {
-        const response = await fetch("https://api.publicapis.org/random");
+        // Using Useless Facts API as an example of a public API (free, no key needed)
+        const response = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
         const data = await response.json();
-        const api = data.entries[0];
-        output.innerHTML = `<p><strong>${api.API}</strong>: ${api.Description}<br>Category: ${api.Category}</p>`;
+        output.innerHTML = `<p><strong>Random Fact</strong>: ${data.text}</p>`;
     } catch (error) {
-        output.innerHTML = "Error fetching public API info.";
+        output.innerHTML = "Error fetching random fact.";
+        console.error("Error:", error);
     }
 }
 
